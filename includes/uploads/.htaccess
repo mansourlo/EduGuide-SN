@@ -1,0 +1,9 @@
+# Interdire l'exécution de scripts dans uploads/
+Options -ExecCGI
+AddHandler cgi-script .php .php3 .php4 .php5 .phtml .pl .py .jsp .asp .sh .cgi
+php_flag engine off
+
+# Autoriser uniquement les PDF
+<FilesMatch "\.pdf$">
+    Allow from all
+</FilesMatch>
